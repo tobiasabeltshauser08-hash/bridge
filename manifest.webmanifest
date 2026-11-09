@@ -1,0 +1,18 @@
+{
+  "name": "Bridge – Englisch A2–B1",
+  "short_name": "Bridge",
+  "description": "Englisch für den Alltag, Niveau A2 bis B1: Wortschatz mit Wiederholung zur richtigen Zeit, Grammatik auf Deutsch erklärt, Hören und Sprechen.",
+  "lang": "de",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b0b0b",
+  "theme_color": "#0b0b0b",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
