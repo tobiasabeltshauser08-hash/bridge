@@ -1,6 +1,6 @@
 // Service Worker: speichert die App, damit sie auch offline läuft.
 // Nach Änderungen an den Dateien die Versionsnummer erhöhen.
-const CACHE = 'bridge-v1';
+const CACHE = 'bridge-v2';
 const FILES = [
   './', 'index.html', 'style.css', 'manifest.webmanifest',
   'js/app.js', 'js/data.js', 'js/logic.js', 'js/speech.js',
@@ -9,7 +9,7 @@ const FILES = [
 const FONTS = 'bridge-fonts';
 
 self.addEventListener('install', e => {
-  e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES.map(f => new Request(f, { cache: 'reload' })))).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', e => {

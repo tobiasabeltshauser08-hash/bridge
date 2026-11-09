@@ -579,3 +579,6 @@ $("#run").addEventListener("click", e => {
 });
 
 render();
+
+// Laufende Runde nicht durch ein App-Update neu laden
+window.appBusy = () => !!(R && !R.finished);
